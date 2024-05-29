@@ -22,15 +22,15 @@ export const Body = () => {
             <form style={{ marginTop: 15 }}>
                 <div className="row">
                     <div className="col-4">
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="name" selected>Breed name</option>
+                        <select className="form-select" aria-label="Default select example">
+                            <option value="name" defaultValue>Breed name</option>
                             <option value="2">Minimum weight</option>
                             <option value="3">Maximum weight </option>
                         </select>
                     </div>
                     <div className="col-6">
                         <div className="mb-3">
-                            <input type="email" class="form-control" id="searchInput" placeholder="input your search keywords"></input>
+                            <input type="email" className="form-control" id="searchInput" placeholder="input your search keywords"></input>
                         </div>
                     </div>
                     <div className="col-1">
