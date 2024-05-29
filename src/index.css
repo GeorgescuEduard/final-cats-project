@@ -1,0 +1,4 @@
+.centered-container {
+    justify-content: center;
+    display: flex;
+}
