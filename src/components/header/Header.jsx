@@ -2,6 +2,7 @@ import { Logo } from "./Logo"
 
 export const Header = () => {
     return (<>
+        <p>am mai adaugat ceva sa testam pe aici</p>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <Logo title={"CAT World"} subtitle={"| lots of cats"} />
@@ -14,7 +15,6 @@ export const Header = () => {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
                             <a className="nav-link" href="#">Link</a>
                         </li>
                         <li className="nav-item dropdown">
