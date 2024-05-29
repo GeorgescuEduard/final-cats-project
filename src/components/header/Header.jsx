@@ -2,7 +2,6 @@ import { Logo } from "./Logo"
 
 export const Header = () => {
     return (<>
-        <p>am mai adaugat ceva sa testam pe aici</p>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <Logo title={"CAT World"} subtitle={"| lots of cats"} />
