@@ -5,13 +5,10 @@ import { Header } from "./components/header/Header";
 
 export const App = () => {
     return (
-        <div className = "App">
+        <div className="App">
             <Header />
             <Body />
-        <div className="Footer">   
-            <Footer /> 
+            <Footer />
         </div>
-
-    </div>
     );
 };
