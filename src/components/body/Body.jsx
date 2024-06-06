@@ -8,18 +8,15 @@ export const Body = () => {
 
     const [curentCat, setCurrentCat] = useState();
 
-    var search_filter;
+    var search_filter = 'name';
     var search_variable;
-    var counter = 0;
 
     const fetchCats = async () => {
         search_variable = document.getElementById("searchInput").value;
+        search_filter = document.getElementById("selectSearch").value;
         if (search_variable) {
-            const response = await axios.get('https://api.api-ninjas.com/v1/cats', {
-                headers: { 'X-Api-Key': api_key },
-                params: {
-                    'name': search_variable,
-                }
+            const response = await axios.get('https://api.api-ninjas.com/v1/cats?' + search_filter + "=" + search_variable, {
+                headers: { 'X-Api-Key': api_key }
             });
             if (response.data[0] == null) {
                 document.getElementById("catImageArea").src = "no-cat.png";
@@ -50,7 +47,7 @@ export const Body = () => {
             <form style={{ marginTop: 15 }}>
                 <div className="row">
                     <div className="col-4">
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" id="selectSearch">
                             <option value="name" defaultValue>Breed name</option>
                             <option value="min_weight">Minimum weight</option>
                             <option value="max_weight">Maximum weight </option>
