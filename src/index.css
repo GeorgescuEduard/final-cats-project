@@ -13,13 +13,30 @@
 .Footer {
     margin-top: auto;
     /*height: 50px; this is unecessary, as it expands the footer and will give us and scrollbar that we don't want*/
-
+    
 }
 
 .image_container {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.text-body-secondary {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+
+}
+
+.form-check-input:checked {
+    background-color: darkblue;
+}
+
+.nav-item {
+    padding: 5px;
+    margin-top: 5px;
 }
 
 /*.nav-item { 
