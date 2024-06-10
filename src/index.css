@@ -13,7 +13,7 @@
 .Footer {
     margin-top: auto;
     /*height: 50px; this is unecessary, as it expands the footer and will give us and scrollbar that we don't want*/
-    
+
 }
 
 .image_container {
@@ -42,3 +42,10 @@
 /*.nav-item { 
     background-color: red;
 } */
+
+.modalCheckmarks p,
+li,
+h5 {
+    text-align: left;
+    margin-bottom: 5px;
+}

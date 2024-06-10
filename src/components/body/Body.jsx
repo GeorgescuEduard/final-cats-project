@@ -51,6 +51,14 @@ export const Body = () => {
                             <option value="name" defaultValue>Breed name</option>
                             <option value="min_weight">Minimum weight</option>
                             <option value="max_weight">Maximum weight </option>
+                            <option value="min_life_expectancy ">Minimim life expectancy </option>
+                            <option value="max_life_expectancy">Maximum life expectancy </option>
+                            <option value="shedding">Shedding </option>
+                            <option value="family_friendly">Family Friendly </option>
+                            <option value="playfulness">Playfulness </option>
+                            <option value="grooming">Grooming </option>
+                            <option value="other_pets_friendly">Other pets friendly </option>
+                            <option value="children_friendly">Children Friendly </option>
                         </select>
                     </div>
                     <div className="col-6">
