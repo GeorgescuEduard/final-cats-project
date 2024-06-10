@@ -7,7 +7,7 @@ export const Footer = () => {
 
     return (
         <div className="Footer">
-            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" id="main-footer">
                 <FooterCopyright />
 
                 <a className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" href="https://www.ubisoft.com/en-gb/" target="_blank">

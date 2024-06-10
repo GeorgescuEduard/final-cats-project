@@ -8,12 +8,17 @@ export const Body = () => {
 
     const [curentCat, setCurrentCat] = useState();
 
-    var search_filter = 'name';
+    var search_filter;
     var search_variable;
+    var search_value;
+    var search_explanation;
 
     const fetchCats = async () => {
-        search_variable = document.getElementById("searchInput").value;
+
         search_filter = document.getElementById("selectSearch").value;
+        search_variable = document.getElementById("searchInput").value;
+
+        document.getElementById("catImageArea").src = "loading-cat.jpg";
         if (search_variable) {
             const response = await axios.get('https://api.api-ninjas.com/v1/cats?' + search_filter + "=" + search_variable, {
                 headers: { 'X-Api-Key': api_key }
@@ -26,19 +31,24 @@ export const Body = () => {
                 document.getElementById("catImageArea").src = response.data[0].image_link;
                 return response.data[0];
             }
-
         }
         else {
             document.getElementById("catImageArea").src = "type-something-cat.png";
         }
     }
 
-    /*useEffect(() => {
-        (async () => {
-            const response = await fetchCats();
-            setCurrentCat(response);
-        })();
-    }, []);*/
+    /*   useEffect(() => {
+           updateSearchValueAndExplanation();
+       }, []);
+   
+   
+       const updateSearchValueAndExplanation = () => {
+           switch (document.getElementById("selectSearch").value) {
+               case "name":
+                   search_value = "Breed name";
+                   search_explanation = " - the name of cat breed <i>(ex. abyssinian, siamese)</i>";
+           }
+       }*/
 
     console.log(curentCat);
     return (<>
@@ -63,13 +73,14 @@ export const Body = () => {
                     </div>
                     <div className="col-6">
                         <div className="mb-3">
-                            <input type="email" className="form-control" id="searchInput" placeholder="input your search keywords"></input>
+                            <input type="text" className="form-control" id="searchInput" placeholder="input your search keywords"></input>
                         </div>
                     </div>
                     <div className="col-1">
                         <button type="button" onClick={fetchCats} className="btn btn-primary">GET</button>
                     </div>
                 </div>
+                <p style={{ fontSize: 17 }}> <b className="highlight-text-search">{search_value}</b>{search_explanation}</p>
             </form>
         </div>
         <>{curentCat && <CatDetails cat={curentCat} />}</>

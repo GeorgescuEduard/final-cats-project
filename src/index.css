@@ -22,12 +22,20 @@
     margin-right: auto;
 }
 
-.text-body-secondary {
+.footer-left-text {
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 10px;
+    color: rgb(33, 37, 41, 0.75);
+}
 
+.footer-right-text {
+    text-align: right;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    color: rgb(33, 37, 41, 0.75);
 }
 
 .form-check-input:checked {
@@ -48,4 +56,34 @@ li,
 h5 {
     text-align: left;
     margin-bottom: 5px;
+}
+
+.dark-theme {
+    background-color: #181a1b;
+    color: rgba(209, 205, 199, 0.75);
+    border-color: #383d3f;
+}
+
+::placeholder {
+    color: rgba(82, 82, 82, 0.75);
+}
+
+a {
+    color: rgb(33, 37, 41, 0.75);
+}
+
+.dark-placeholdertext::placeholder {
+    color: rgba(209, 205, 199, 0.75);
+}
+
+.dark-backgroundcolor::-moz-focus-inner {
+    background-color: #181a1b;
+}
+
+footer .nav-link {
+    color: rgb(33, 37, 41, 0.75);
+}
+
+.highlight-text-search {
+    color: #0d6efd;
 }

@@ -2,7 +2,7 @@ export const TeamModal = () => {
     return <>
         <div className="modal fade" id="teamModalCenter" tabIndex="-1" role="dialog" aria-labelledby="teamModalCenterTitle" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered" role="document">
-                <div className="modal-content">
+                <div className="modal-content" id="team-modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="teamModalLongTitle">Project Cats Team</h5>
                     </div>
